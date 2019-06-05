@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-                            Swift版本工具集
+                            Swift版本工具集，持续更新中。
                        DESC
 
   s.homepage         = 'https://github.com/HuuLiang/HLToolKit-Swift'
@@ -26,12 +26,21 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'HuLiangLiang' => 'Liangola@qq.com' }
   s.source           = { :git => 'https://github.com/HuuLiang/HLToolKit-Swift.git', :tag => s.version.to_s }
-  s.swift_version    = "4.0"
+  s.swift_version    = "5.0.1"
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
+  
+  
   s.source_files = 'HLToolKit-Swift/**/*'
+  s.dependency  'Aspects'
+  s.dependency  'Alamofire'
+  s.dependency  'CodableAlamofire'
+  s.dependency  'Kingfisher'
+  s.dependency  'HandyJSON'
+  s.dependency  'PromiseKit'
+  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+
   
   # s.resource_bundles = {
   #   'HLToolKit-Swift' => ['HLToolKit-Swift/Assets/*.png']
